@@ -6,7 +6,6 @@
 
     import MouseGuardActorSheetHeader from "./MouseGuardActorSheetHeader.svelte";
     import MouseGuardNpcActorSheetBody from "./MouseGuardNPCActorSheetBody.svelte";
-    import MouseGuardActorSheetMouseDispo from "./MouseGuardActorSheetMouseDispo.svelte";
 
     //Exports
     export let dataStore;
@@ -18,9 +17,6 @@
 
 <div class="box">
     <MouseGuardNpcActorSheetBody />
-</div>
-<div class="box">
-    <MouseGuardActorSheetMouseDispo />
 </div>
 
 <style>

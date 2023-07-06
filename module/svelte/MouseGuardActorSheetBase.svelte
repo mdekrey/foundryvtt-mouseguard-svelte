@@ -6,7 +6,6 @@
     import MouseGuardActorSheetMouseDetails from "./MouseGuardActorSheetMouseDetails.svelte";
     import MouseGuardActorSheetMouseRewards from "./MouseGuardActorSheetMouseRewards.svelte";
     import MouseGuardActorSheetMouseSkillAbilityTab from "./MouseGuardActorSheetMouseSkillAbilityTab.svelte";
-    import MouseGuardActorSheetMouseDispo from "./MouseGuardActorSheetMouseDispo.svelte";
     import MouseGuardActorSheetPortrait from "./MouseGuardActorSheetMousePortrait.svelte";
     import MouseGuardActorSheetMouseName from "./MouseGuardActorSheetMouseName.svelte";
 
@@ -27,15 +26,11 @@
         {
             label: game.i18n.localize("MOUSEGUARD.Rewards"),
             component: MouseGuardActorSheetMouseRewards
-        },
-        {
-            label: game.i18n.localize("MOUSEGUARD.Disposition"),
-            component: MouseGuardActorSheetMouseDispo
         }
     ];
 
     export let activeTabValue = items[0].component;
-    const handleClick = tabValue => () => (activeTabValue = tabValue);
+    const handleClick = (tabValue) => () => (activeTabValue = tabValue);
 </script>
 
 <content>
@@ -44,7 +39,12 @@
             <MouseGuardActorSheetMouseName />
             <nav class="sheet-navigation tabs">
                 {#each items as item}
-                    <a class="item {activeTabValue === item.component ? 'active' : ''}" on:click={handleClick(item.component)}>
+                    <a
+                        class="item {activeTabValue === item.component
+                            ? 'active'
+                            : ''}"
+                        on:click={handleClick(item.component)}
+                    >
                         {item.label}
                     </a>
                 {/each}
@@ -54,7 +54,7 @@
     </div>
     <div class="box">
         {#if activeTabValue}
-            <svelte:component this={activeTabValue}/>
+            <svelte:component this={activeTabValue} />
         {/if}
     </div>
 </content>
@@ -67,7 +67,7 @@
     .box {
         margin-bottom: 10px;
         padding-top: 20px;
-        border-radius: 0 0 .5rem .5rem;
+        border-radius: 0 0 0.5rem 0.5rem;
         border-top: 0;
     }
 
