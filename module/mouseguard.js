@@ -12,12 +12,10 @@ import { MouseGuardNPCActorSheet } from "./npcactor-sheet.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { createMouseGuardMacro } from "./macro.js";
 import { MouseDie, MouseRoll } from "./mousedie.js";
-import ConflictTracker from "./conflict-tracker.js";
 import MouseCombatant from "./mouse-combantant.js";
 import MouseCombat from "./mouse-combat.js";
 import MouseCombatTracker from "./mouse-combat-tracker.js";
 import MouseSocket from "./socket.js";
-//import MouseCombatModal from "./mouse-combat-modal.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
